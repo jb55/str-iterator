@@ -3,6 +3,8 @@
 
   es6 iterator for strings
 
+  [![Build Status](https://travis-ci.org/jb55/str-iterator.svg)](https://travis-ci.org/jb55/str-iterator)
+
 ## Installation
 
   Install with npm
@@ -27,7 +29,7 @@ let take = require('take-iterator');
 
 let hello = $(str("hello there"))
   .to(take, 5)
-  .to(reduce, function(str, chr){ return str += chr; })
+  .to(reduce, function(str, chr){ return str += chr; }, "")
   .val
 
 console.log(hello);
